@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+
+<title>Reservations Page</title>
+
+{% endblock page_title %}
+
+{% block content %}
+	
+	{% for reservation in reservations %}
+		<p>{{ reservation.appointment }}</p>
+		<p>{{ reservation.range }}</p>
+		<p>{{ reservation.full_name }}</p>
+		<p>{{ reservation.email }}</p>
+		<br />
+	{% endfor %}
+
+{% endblock content %}

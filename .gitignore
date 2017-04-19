@@ -1,0 +1,5 @@
+*.pyc
+/src/
+/appointments/migrations/
+/management/settings.py
+

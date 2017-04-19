@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+
+<title>Appointment Page</title>
+
+{% endblock page_title %}
+
+{% block content %}
+	
+	{% ifequal available False %}
+    	<p>Current appointment isn't available. Try to access another one.</p>	
+    {% else %}
+    	<form action="" method="post">
+	        <ul>
+	            {{ form.as_ul }}
+	        </ul>
+	        {% csrf_token %}
+	        <input type="submit" value="Submit">
+	    </form>
+	{% endifequal %}
+
+{% endblock content %}

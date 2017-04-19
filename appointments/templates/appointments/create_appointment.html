@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+
+<title>Create Appointment</title>
+
+{% endblock page_title %}
+
+{% block content %}
+
+	<form action="" method="post">
+        <ul>
+            {{ form.as_ul }}
+        </ul>
+        {% csrf_token %}
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock content %}
